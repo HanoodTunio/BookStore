@@ -4,7 +4,7 @@ import book from "../../public/book.png";
 function Banner() {
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row">
+      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10">
         <div className="w-full md:w-1/2 order-2 md:order-1 mt-10 md:mt-32">
           <div className="space-y-14 ">
             <h1 className="text-4xl font-bold mt-2">
