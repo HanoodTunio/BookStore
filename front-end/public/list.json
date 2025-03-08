@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "name": "Story Book",
+      "title": "Lorem ipsum dolor sit amet",
+      "price": 0,
+      "category": "Free",
+      "Image": "https://img.freepik.com/free-psd/black-book-mockup-elegant-simple-design-publication_191095-84101.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Fictional Book",
+      "title": "Lorem ipsum dolor sit amet",
+      "price": 20,
+      "category": "Fictional",
+      "Image": "https://img.freepik.com/free-psd/black-book-mockup-elegant-simple-design-publication_191095-84101.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Sports Book",
+      "title": "Lorem ipsum dolor sit amet",
+      "price": 40,
+      "category": "Sports",
+      "Image": "https://img.freepik.com/free-psd/black-book-mockup-elegant-simple-design-publication_191095-84101.jpg"
+    },
+    {
+      "id": 4,
+      "name": "History Book",
+      "title": "Lorem ipsum dolor sit amet",
+      "price": 80,
+      "category": "History",
+      "Image": "https://img.freepik.com/free-psd/black-book-mockup-elegant-simple-design-publication_191095-84101.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Story Book",
+      "title": "Lorem ipsum dolor sit amet",
+      "price": 0,
+      "category": "Free",
+      "Image": "https://img.freepik.com/free-psd/black-book-mockup-elegant-simple-design-publication_191095-84101.jpg"
+    }
+  ]
+  
