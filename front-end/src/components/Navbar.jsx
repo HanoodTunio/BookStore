@@ -45,10 +45,10 @@ function Navbar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a href="#">Home</a>
+                <a href="/">Home</a>
               </li>
               <li>
-                <a href="#">Course</a>
+                <a href="/course">Course</a>
               </li>
               <li>
                 <a href="#">Contact</a>
@@ -63,10 +63,10 @@ function Navbar() {
 
         {/* Center Links */}
         <div className="hidden lg:flex space-x-6">
-          <a href="#" className="hover:text-gray-600">
+          <a href="/" className="hover:text-gray-600">
             Home
           </a>
-          <a href="#" className="hover:text-gray-600">
+          <a href="/course" className="hover:text-gray-600">
             Course
           </a>
           <a href="#" className="hover:text-gray-600">
