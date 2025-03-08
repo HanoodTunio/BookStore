@@ -63,7 +63,7 @@ function Navbar() {
             </ul>
           </div>
           <div className="hidden md:block">
-            <label className="input">
+            <label className="input flex items-center rounded-lg px-3 py-1 focus-within:border-gray-400">
               <svg
                 className="h-[1em] opacity-50"
                 xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,11 @@ function Navbar() {
                   <path d="m21 21-4.3-4.3"></path>
                 </g>
               </svg>
-              <input type="search" className="grow" placeholder="Search" />
+              <input
+                type="search"
+                className="grow px-2 py-1 border-none outline-none focus:ring-0"
+                placeholder="Search"
+              />
             </label>
           </div>
           <div className="w-fit p-2 rounded-lg">
