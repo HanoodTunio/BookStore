@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../components/Cards";
+import { Link } from "react-router-dom";
 
 function CourseCard() {
   const [list, setList] = useState([]);
@@ -25,9 +26,11 @@ function CourseCard() {
             perspiciatis voluptas minima quam error quidem rerum illum libero
             nulla corporis soluta eligendi nisi!
           </p>
-          <button className="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300 mt-10 cursor-pointer">
-            Back
-          </button>
+          <Link to="/">
+            <button className="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300 mt-10 cursor-pointer">
+              Back
+            </button>
+          </Link>
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 space-x-2 space-y-1 justify-items-center">
           {list.length > 0 ? (
