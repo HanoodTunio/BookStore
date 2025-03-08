@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function Navbar() {
   const [sticky, setSticky] = useState(false);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,17 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Apply the theme
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  // Toggle theme function
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
     <div
@@ -107,27 +119,25 @@ function Navbar() {
 
           {/* Theme Toggle */}
           <div className="p-2 rounded-lg">
-            <label className="swap swap-rotate">
-              <input
-                type="checkbox"
-                className="theme-controller"
-                value="synthwave"
-              />
-              <svg
-                className="swap-off h-6 w-6 fill-current text-yellow-500"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17Z" />
-              </svg>
-              <svg
-                className="swap-on h-6 w-6 fill-current text-gray-700 dark:text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path d="M21.64,13a1,1,0,0,0-1.05-.14,6.05,6.05,0,0,1-3.37.73A6.15,6.15,0,0,1,9.06,5.49a6.59,6.59,0,0,1,.25-2A1,1,0,0,0,6,2.36,10.14,10.14,0,1,0,22,14.05A1,1,0,0,0,21.64,13Z" />
-              </svg>
-            </label>
+            <button onClick={toggleTheme} className="swap swap-rotate">
+              {theme === "light" ? (
+                <svg
+                  className="h-6 w-6 fill-current text-yellow-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17Z" />
+                </svg>
+              ) : (
+                <svg
+                  className="h-6 w-6 fill-current text-gray-700 dark:text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M21.64,13a1,1,0,0,0-1.05-.14,6.05,6.05,0,0,1-3.37.73A6.15,6.15,0,0,1,9.06,5.49a6.59,6.59,0,0,1,.25-2A1,1,0,0,0,6,2.36,10.14,10.14,0,1,0,22,14.05A1,1,0,0,0,21.64,13Z" />
+                </svg>
+              )}
+            </button>
           </div>
 
           {/* Sign In Button */}
