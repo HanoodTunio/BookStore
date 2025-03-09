@@ -143,7 +143,7 @@ function Navbar() {
           {/* Sign In Button */}
           <div className="flex items-center">
             <a
-              href="#"
+              href="/Login"
               className="bg-black text-white px-6 py-2 rounded-md hover:bg-slate-800 transition duration-300"
             >
               Sign In
