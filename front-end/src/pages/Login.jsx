@@ -1,10 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { X } from "lucide-react"; // Import cross icon from lucide-react
 
 function Login() {
+  const navigate = useNavigate(); // Hook to navigate programmatically
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900">
-      <div className="w-full max-w-md p-6 rounded-lg shadow-lg bg-white dark:bg-gray-800">
+      <div className="relative w-full max-w-md p-6 rounded-lg shadow-lg bg-white dark:bg-gray-800">
+        {/* Close Button (Top-Right) */}
+        <button
+          onClick={() => navigate("/")} // Redirect to Home
+          className="absolute top-4 right-4 text-gray-500 dark:text-gray-300 hover:text-red-500"
+        >
+          <X size={24} />
+        </button>
+
         <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-white">
           Welcome Back!
         </h2>
@@ -20,11 +31,9 @@ function Login() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="w-full px-3 py-2 mt-1 border 
-                      border-gray-300 dark:border-gray-600 
-                      rounded-md outline-none focus:ring-2 
-                      focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 
-                      text-black dark:text-white"
+            className="w-full px-3 py-2 mt-1 border border-gray-300 dark:border-gray-600 
+                      rounded-md outline-none focus:ring-2 focus:ring-blue-500 
+                      bg-gray-100 dark:bg-gray-700 text-black dark:text-white"
           />
         </div>
 
@@ -36,11 +45,9 @@ function Login() {
           <input
             type="password"
             placeholder="Enter your password"
-            className="w-full px-3 py-2 mt-1 border 
-                      border-gray-300 dark:border-gray-600 
-                      rounded-md outline-none focus:ring-2 
-                      focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 
-                      text-black dark:text-white"
+            className="w-full px-3 py-2 mt-1 border border-gray-300 dark:border-gray-600 
+                      rounded-md outline-none focus:ring-2 focus:ring-blue-500 
+                      bg-gray-100 dark:bg-gray-700 text-black dark:text-white"
           />
         </div>
 
@@ -54,7 +61,7 @@ function Login() {
           </button>
         </div>
 
-        {/* Don't have an account? Register */}
+        {/* Register Link */}
         <p className="text-sm text-gray-600 dark:text-gray-400 mt-4 text-center">
           Don't have an account?{" "}
           <Link
